@@ -1,0 +1,30 @@
+rest_user_create:
+    path: /api/user
+    methods: ['POST']
+    controller: Directory\UI\Controller\Rest\UserController::createUser
+
+rest_user_update:
+    path: /api/user
+    methods: ['PUT']
+    controller: Directory\UI\Controller\Rest\UserController::updateUser
+
+rest_user_search:
+    path: /api/user
+    methods: ['GET']
+    controller: Directory\UI\Controller\Rest\UserController::searchUsers
+
+rest_user_get:
+    path: /api/user/{id}
+    methods: ['GET']
+    controller: Directory\UI\Controller\Rest\UserController::getUser
+
+rest_user_delete:
+    path: /api/user/{id}
+    methods: ['DELETE']
+    controller: Directory\UI\Controller\Rest\UserController::deleteUser
+
+index:
+    path: /{path}
+    controller: Directory\UI\Controller\IndexController::index
+    requirements:
+        path: '.*'
