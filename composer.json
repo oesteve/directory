@@ -12,7 +12,6 @@
         "ramsey/uuid": "^3.9",
         "symfony/console": "4.4.*",
         "symfony/dotenv": "4.4.*",
-        "symfony/flex": "^1.6",
         "symfony/framework-bundle": "4.4.*",
         "symfony/messenger": "4.4.*",
         "symfony/serializer-pack": "^1.0",
@@ -50,16 +49,6 @@
         "symfony/polyfill-php56": "*"
     },
     "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        },
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ],
         "phpstan": [
             "phpstan analyse src"
         ],
