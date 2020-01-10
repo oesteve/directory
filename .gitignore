@@ -1,10 +1,3 @@
-/.env.local
-/.env.local.php
-/.env.*.local
-/public/bundles/
-/var/
-/vendor/
-
 /phpunit.xml
 .phpunit.result.cache
 
@@ -20,3 +13,13 @@ tests/e2e/cypress/screenshots
 /cypress
 
 .idea
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/src/Infrastructure/Symfony/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
