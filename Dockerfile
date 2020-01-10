@@ -16,20 +16,24 @@ RUN apk update && \
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 # Dependecies
-ADD composer.json composer.lock package.json yarn.lock /var/www/
-RUN cd /var/www/ && \
-    composer install -n --prefer-dist --no-dev --no-suggest --no-scripts && \
-    yarn install
+# ADD composer.json composer.lock package.json yarn.lock /var/www/
+# RUN cd /var/www/ && \
+#    composer install -n --prefer-dist --no-dev --no-suggest --no-scripts && \
+#    yarn install
 
 # Source
 ADD . /var/www/
 
 # Build source
+ENV NODE_ENV production
 RUN cd /var/www/ && \
+    composer install -n --prefer-dist --no-dev --no-suggest --no-scripts && \
     composer dump-autoload -n --no-dev --optimize && \
     composer dump-env prod && \
+    yarn install && \
     yarn build && \
-    ./bin/console cache:clear --env=prod
+    ./bin/console cache:clear --env=prod && \
+    rm node_modules var/cache/dev -Rf
 
 EXPOSE 80
 WORKDIR /var/www/

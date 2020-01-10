@@ -1,8 +1,5 @@
 {
     "devDependencies": {
-        "@babel/preset-react": "^7.7.4",
-        "@symfony/webpack-encore": "^0.28.2",
-        "core-js": "^3.0.0",
         "cypress": "^3.8.1",
         "eslint": "^6.8.0",
         "eslint-config-airbnb": "^18.0.1",
@@ -10,8 +7,7 @@
         "eslint-plugin-jsx-a11y": "^6.2.3",
         "eslint-plugin-react": "^7.17.0",
         "eslint-plugin-react-hooks": "^1.7.0",
-        "regenerator-runtime": "^0.13.2",
-        "webpack-notifier": "^1.6.0"
+        "regenerator-runtime": "^0.13.2"
     },
     "license": "UNLICENSED",
     "private": true,
@@ -24,8 +20,11 @@
         "cypress": "cypress run"
     },
     "dependencies": {
+        "@babel/preset-react": "^7.7.4",
         "@reduxjs/toolkit": "^1.2.1",
+        "@symfony/webpack-encore": "^0.28.2",
         "axios": "^0.19.0",
+        "core-js": "^3.6.2",
         "prop-types": "^15.7.2",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
@@ -35,6 +34,7 @@
         "redux-devtools-extension": "^2.13.8",
         "redux-logger": "^3.0.6",
         "redux-thunk": "^2.3.0",
-        "underscore": "^1.9.1"
+        "underscore": "^1.9.1",
+        "webpack-notifier": "^1.8.0"
     }
 }

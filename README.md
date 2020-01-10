@@ -2,9 +2,13 @@
 
 ### Docker
 
-La forma más sencilla, rápida y menos intrusiba de desplegar la aplicación es el uso de Docker. El proyecto dispone de un
-fichero *Dockerfile* para poder construir una imagen con todas las dependencias. También se dispone de un fichero 
-*docker-compose.yml* que nos permitirá desplegar la aplicación de forma sencilla en nuestro equipo:
+La forma más sencilla, rápida y menos intrusiba de desplegar la aplicación es el uso de Docker. Existe una imagen con la
+última version disponible de este repositorio para poder ser desplegada con:
+
+    docker run --rm -p 8000:80 oesteve/directory
+
+El proyecto dispone de un fichero *docker-compose.yml* que nos permitirá construir y desplegar la aplicación de forma 
+sencilla en nuestro equipo:
 
     docker-compose up
     
