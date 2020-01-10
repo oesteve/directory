@@ -24,8 +24,6 @@
         "cypress": "cypress run"
     },
     "dependencies": {
-        "@material-ui/core": "^4.8.2",
-        "@material-ui/icons": "^4.5.1",
         "@reduxjs/toolkit": "^1.2.1",
         "axios": "^0.19.0",
         "prop-types": "^15.7.2",
