@@ -1,4 +1,6 @@
 {
+    "name": "oesteve/directory",
+    "description": "A simple demo app",
     "type": "project",
     "license": "proprietary",
     "require": {
@@ -22,8 +24,7 @@
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12.3",
-        "phpunit/phpunit": "^8.5",
-        "ext-json": "*"
+        "phpunit/phpunit": "^8.5"
     },
     "config": {
         "preferred-install": {
