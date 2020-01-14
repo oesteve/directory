@@ -9,6 +9,7 @@ use Directory\Domain\User\UserProperty;
 use Directory\Domain\User\UserRepository;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
+use Doctrine\DBAL\Platforms\SqlitePlatform;
 
 class DoctrineUserRepository implements UserRepository
 {
@@ -47,6 +48,10 @@ class DoctrineUserRepository implements UserRepository
 
     public function remove(string $id): void
     {
+        $platform = $this->connection->getDatabasePlatform();
+        if ($platform instanceof SqlitePlatform) {
+            $this->connection->executeQuery('PRAGMA foreign_keys = ON');
+        }
         $this->connection->createQueryBuilder()
             ->delete(self::USER_TABLE)
             ->where('id = :id')

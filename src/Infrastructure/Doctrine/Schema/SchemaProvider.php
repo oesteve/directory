@@ -21,7 +21,7 @@ final class SchemaProvider implements SchemaProviderInterface
         $userProperty->addColumn('user_id', 'string');
         $userProperty->addColumn('name', 'string', ['notnull' => false]);
         $userProperty->addColumn('value', 'string', ['notnull' => false]);
-        $userProperty->addForeignKeyConstraint($user, ['user_id'], ['id']);
+        $userProperty->addForeignKeyConstraint($user, ['user_id'], ['id'], ['onDelete' => 'CASCADE']);
         $userProperty->addUniqueIndex(['user_id', 'name']);
 
         return $schema;
